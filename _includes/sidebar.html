@@ -13,14 +13,14 @@
               {{ site.avatar | relative_url }}
             {% endif %}
           {% endcapture %}
-        <img src="{{ avatar_url | strip }}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+        <img src="{{ avatar_url | strip }}" width="128" height="128" alt="avatar" onerror="this.style.display='none'">
       {% endif %}
     </a>
 
     <div class="site-title">
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </div>
-    <div class="site-subtitle fst-italic">{{ site.tagline }}</div>
+    <div class="site-subtitle">{{ site.tagline }}</div>
   </div>
   <!-- .profile-wrapper -->
 
