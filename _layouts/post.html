@@ -13,21 +13,23 @@ tail_includes:
 
 <h1 data-toc-skip>{{ page.title }}</h1>
 
-<div class="post-meta text-muted">
+<div class="post-meta text-muted align-items-end">
     <!-- published date -->
     <span>
       {{ site.data.locales[lang].post.posted }}
-      {% include datetime.html date=page.date tooltip=true lang=lang %}
+      {% include datetime.html date=page.date tooltip=false lang=lang %}
     </span>
 
     <!-- lastmod date -->
     {% if page.last_modified_at and page.last_modified_at != page.date %}
     <span>
       {{ site.data.locales[lang].post.updated }}
-      {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
+      {% include datetime.html date=page.last_modified_at tooltip=false lang=lang %}
     </span>
     {% endif %}
-
+    <span>
+    {% include read-time.html content=content prompt=false lang=lang %}
+    </span>
   {% if page.image %}
     {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
     {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
@@ -47,36 +49,31 @@ tail_includes:
     </div>
   {% endif %}
 
-  <div class="d-flex justify-content-between">
-    <!-- author(s) -->
-    <span>
-      {% if page.author %}
-        {% assign authors = page.author %}
-      {% elsif page.authors %}
-        {% assign authors = page.authors %}
-      {% endif %}
+  <!-- author(s)
+<div class="d-flex justify-content-between">
 
-      {{ site.data.locales[lang].post.written_by }}
+  <span>
+    {% if page.author %}
+      {% assign authors = page.author %}
+    {% elsif page.authors %}
+      {% assign authors = page.authors %}
+    {% endif %}
 
-      <em>
-      {% if authors %}
-        {% for author in authors %}
-          <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-          {% unless forloop.last %}</em>, <em>{% endunless %}
-        {% endfor %}
-      {% else %}
-        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
-      {% endif %}
-      </em>
-    </span>
+    {{ site.data.locales[lang].post.written_by }}
 
-    <div>
-      <!-- read time -->
-      {% include read-time.html content=content prompt=true lang=lang %}
-    </div>
+    <em>
+    {% if authors %}
+      {% for author in authors %}
+        <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+        {% unless forloop.last %}</em>, <em>{% endunless %}
+      {% endfor %}
+    {% else %}
+      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+    {% endif %}
+    </em>
+  </span>
 
-  </div> <!-- .d-flex -->
-
+  </div>--> <!-- .d-flex -->
 </div> <!-- .post-meta -->
 
 <div class="post-content">
