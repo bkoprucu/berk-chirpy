@@ -13,7 +13,7 @@ tail_includes:
 
 <h1 data-toc-skip>{{ page.title }}</h1>
 
-<div class="post-meta text-muted align-items-end">
+<div class="post-meta text-muted">
     <!-- published date -->
     <span>
       {{ site.data.locales[lang].post.posted }}
@@ -28,7 +28,7 @@ tail_includes:
     </span>
     {% endif %}
     <span>
-    {% include read-time.html content=content prompt=false lang=lang %}
+    {% include read-time.html content=content prompt=true lang=lang %}
     </span>
   {% if page.image %}
     {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
