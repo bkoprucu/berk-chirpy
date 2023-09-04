@@ -5,3 +5,8 @@ $base-radius: 0.3rem;
 
 $font-family-base: Helvetica, Arial, Oswald, sans-serif;
 $font-family-heading: Helvetica, Arial, Oswald, sans-serif;
+
+$sidebar-width: 250px !default; /* the basic width */
+$sidebar-width-large: 280px !default; /* screen width: >= 1650px */
+
+$main-content-max-width: 1500px !default;
