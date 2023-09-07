@@ -902,7 +902,6 @@ $btn-mb: 0.5rem;
 
 #topbar-wrapper {
   height: $topbar-height;
-  background-color: var(--topbar-bg);
 }
 
 #topbar {
@@ -940,14 +939,13 @@ $btn-mb: 0.5rem;
   display: flex;
   width: 100%;
   border-radius: .3rem;
-  border: 1px solid var(--search-wrapper-border-color);
-  background: var(--main-bg);
+  //border: 1px solid var(--search-wrapper-border-color);
+  background: var(--highlight-bg-color);
   padding: 0 0.5rem;
 
   i {
     z-index: 2;
     font-size: 0.9rem;
-    color: var(--search-icon-color);
   }
 }
 
@@ -1116,7 +1114,7 @@ $btn-mb: 0.5rem;
 /* --- button back-to-top --- */
 
 #back-to-top {
-  $size: 3rem;
+  $size: 2.5rem;
 
   display: none;
   z-index: 1;
@@ -1129,8 +1127,8 @@ $btn-mb: 0.5rem;
   padding: 0;
   width: $size;
   height: $size;
-  border-radius: 50%;
-  border: 1px solid var(--btn-backtotop-border-color);
+  border-radius: 25%;
+  //border: 1px solid var(--btn-backtotop-border-color);
   transition: transform 0.2s ease-out;
   -webkit-transition: transform 0.2s ease-out;
 
@@ -1307,8 +1305,7 @@ $btn-mb: 0.5rem;
     width: 100%;
   }
 
-  #breadcrumb,
-  #search-wrapper {
+  #breadcrumb {
     display: none;
   }
 
@@ -1517,11 +1514,6 @@ $btn-mb: 0.5rem;
     left: $sidebar-width-large;
   }
 
-  #search-wrapper {
-    margin-right: calc(
-      #{$main-content-max-width} * 0.25 - #{$search-max-width} - 0.75rem
-    );
-  }
 
   #main,
   footer > .container {
@@ -1541,34 +1533,4 @@ $btn-mb: 0.5rem;
     );
   }
 
-  #sidebar {
-    width: $sidebar-width-large;
-
-    $icon-gap: 1rem; // for the bottom icons
-
-    .profile-wrapper {
-      margin-top: 3.5rem;
-      margin-bottom: 2.5rem;
-      padding-left: 3.5rem;
-    }
-
-    ul {
-      li.nav-item {
-        @include pl-pr(2.75rem);
-      }
-    }
-
-    .sidebar-bottom {
-      padding-left: 2.75rem;
-      margin-bottom: 1.75rem;
-
-      a:not(:last-child) {
-        margin-right: $icon-gap;
-      }
-
-      .icon-border {
-        @include ml-mr(calc(($icon-gap - $btn-border-width) / 2));
-      }
-    }
-  }
 } /* min-width: 1650px */

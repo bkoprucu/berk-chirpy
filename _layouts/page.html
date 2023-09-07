@@ -43,18 +43,10 @@ layout: default
 
   <!-- panel -->
   <div id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
-    <i id="search-trigger" class="fas fa-search fa-fw"></i>
-    <span id="search-wrapper" class="align-items-center">
+    <div id="search-wrapper" class="align-items-center ps-3">
       <i class="fas fa-search fa-fw"></i>
-      <input
-        class="form-control"
-        id="search-input"
-        type="search"
-        aria-label="search"
-        autocomplete="off"
-        placeholder="{{ site.data.locales[include.lang].search.hint | capitalize }}..."
-      >
-    </span>
+      <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off">
+    </div>
     <span id="search-cancel">{{ site.data.locales[include.lang].search.cancel }}</span>
     <div class="access">
       {% include_cached update-list.html lang=lang %}
