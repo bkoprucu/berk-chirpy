@@ -813,12 +813,13 @@ $btn-mb: 0.5rem;
     margin-bottom: 1.5rem;
 
     %button {
-      width: 1.75rem;
-      height: 1.75rem;
+      width: 1.9rem;
+      height: 1.9rem;
       margin-bottom: $btn-mb; // multi line gap
-      border-radius: 50%;
+      border-radius: 25%;
       color: var(--sidebar-btn-color);
-      //background-color: var(--sidebar-btn-bg);
+      font-size: 110%;
+      background-color: var(--sidebar-btn-bg);
       text-align: center;
       display: flex;
       align-items: center;
@@ -1473,7 +1474,7 @@ $btn-mb: 0.5rem;
   }
 
   #search-wrapper {
-    margin-right: 3rem;
+    margin-right: 2rem;
   }
 
   #search-input {
