@@ -44,10 +44,17 @@ layout: default
   <!-- panel -->
   <div id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
     <div id="search-parent" class="align-items-center">
+      {% unless site.theme_mode %}
+      <button class="mode-toggle btn btn-mode-toggle " aria-label="Switch Mode">
+        <i class="fas fa-adjust"></i>
+      </button>
+      <span class="icon-border"></span>
+      {% endunless %}
       <div id="search-wrapper" class="align-items-center ps-3">
         <i class="fas fa-search fa-fw"></i>
         <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off">
       </div>
+
     </div>
     <span id="search-cancel">{{ site.data.locales[include.lang].search.cancel }}</span>
     <div class="access">

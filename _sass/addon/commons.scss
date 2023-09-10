@@ -718,14 +718,7 @@ $btn-mb: 0.5rem;
     height: 8rem;
     overflow: hidden;
     box-shadow: var(--avatar-border-color) 0 0 0 1px;
-    //transform: translateZ(0); /* fixed the zoom in Safari */
     border-radius: .3em;
-    // img {
-    //   transition: transform 0.5s;
-    //   &:hover {
-    //     transform: scale(1.2);
-    //   }
-    // }
   }
 
   .profile-wrapper {
@@ -825,7 +818,7 @@ $btn-mb: 0.5rem;
       margin-bottom: $btn-mb; // multi line gap
       border-radius: 50%;
       color: var(--sidebar-btn-color);
-      background-color: var(--sidebar-btn-bg);
+      //background-color: var(--sidebar-btn-bg);
       text-align: center;
       display: flex;
       align-items: center;
@@ -944,7 +937,15 @@ $btn-mb: 0.5rem;
   position: sticky;
   top: 0;
   background-color: var(--main-bg);
+  color: var(--text-muted-color);
 }
+
+.btn.btn-mode-toggle {
+  color: var(--text-muted-color);
+  padding-top: .7rem;
+  font-size: 85%;
+}
+
 
 #search-wrapper {
   display: flex;
@@ -1472,7 +1473,7 @@ $btn-mb: 0.5rem;
   }
 
   #search-wrapper {
-    margin-right: 4rem;
+    margin-right: 3rem;
   }
 
   #search-input {
