@@ -935,6 +935,17 @@ $btn-mb: 0.5rem;
   display: none;
 }
 
+#search-parent {
+  height: 4rem;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--main-bg);
+}
+
 #search-wrapper {
   display: flex;
   width: 100%;
